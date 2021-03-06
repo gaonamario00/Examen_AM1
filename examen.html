@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima en México</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Nuages.gif/334px-Nuages.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding:0;
+            overflow: hidden;
+            width: 100vh;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body style="text-align: center;" class="container">
+    
+        <br>
+    <br>
+    <h1 style="color:black">Buscador de las temperaturas actuales en la republica mexicana</h1>
+    <br>
+    <h4 style="color:black">Ingrese en la caja de texto el nombre de la ciudad</h4>
+    <input id = "city" type="text" style="text-align: center;">
+    <button id="btn" class="btn btn-info" onclick = "verificarCiudad()">Buscar clima</button>
+    
+    <div id = "results" >
+        <br>
+        <br>
+        <div>
+            <h3 id="nombre-ciudad"></h3>
+            <h5><span id="descripccion"></span></h5>
+        </div>
+        <br>
+        <br>
+    <div class="row">
+        <br>
+        <br>
+		<div class="col-lg-4">
+			<div  class="tm-feature">
+                <h5 id="min"></h5>
+                <h5 id="clima-min"></h5>
+			</div>
+		</div>
+        <br>
+        <br>
+        <br>
+		<div class="col-lg-4">
+			<div class="tm-feature" >
+                <h3 id="actualmente" ></h3>
+                <h3 id="clima-actual" ></h3>
+			</div>
+		</div>
+        <br>
+        <br>
+        <br>
+		<div class="col-lg-4">
+			<div class="tm-feature">
+                <h5 id="max"></h5>
+                <h5 id="clima-max"></h5>
+		</div>
+	</div>
+    </div>
+    
+    <script src="apiweathercall.js"></script>
+    <script src="dataViewer.js" ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>
